@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91C65502-6FDE-498B-BB73-29D3FA553FF1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Proyecto.My.MyApplication</StartupObject>
+    <RootNamespace>Proyecto</RootNamespace>
+    <AssemblyName>Proyecto</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Proyecto.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Proyecto.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CDatos\Datasets\BaseDeDatosProyectoDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDatosProyectoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Datasets\BaseDeDatosProyectoDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDatosProyectoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Datasets\BaseDeDatosProyectoDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDatosProyectoDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Datasets\BaseDeDatosProyectoDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDatosProyectoDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Datasets\BaseDeDatosProyectoDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDatosProyectoDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Datasets\BaseDeDatosProyectoDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDatosProyectoDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Datasets\BaseDeDatosProyectoDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDatosProyectoDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Datasets\BaseDeDatosProyectoDataSet7.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDatosProyectoDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Datasets\BaseDeDatosProyectoDataSet8.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDatosProyectoDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Base De Datos.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Base De Datos.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Base De Datos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Base De Datos.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Base De Datos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Base De Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Categoria_Producto.vb">
+      <DependentUpon>Base De Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Clientes.vb">
+      <DependentUpon>Base De Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\DCliente.vb" />
+    <Compile Include="CDatos\DDetalleFactura.vb" />
+    <Compile Include="CDatos\Detalle_Factura.vb">
+      <DependentUpon>Base De Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\DFactura.vb" />
+    <Compile Include="CDatos\DProducto.vb" />
+    <Compile Include="CDatos\DTipo_Usuario.vb" />
+    <Compile Include="CDatos\DEmpleado.vb" />
+    <Compile Include="CDatos\Empleados.vb">
+      <DependentUpon>Base De Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Encryption.vb" />
+    <Compile Include="CDatos\Facturas.vb">
+      <DependentUpon>Base De Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CNegocio\NCliente.vb" />
+    <Compile Include="CNegocio\NDetalleFactura.vb" />
+    <Compile Include="CNegocio\NEmpleado.vb" />
+    <Compile Include="CNegocio\NFactura.vb" />
+    <Compile Include="CNegocio\NProducto.vb" />
+    <Compile Include="CNegocio\NTipo_Usuario.vb" />
+    <Compile Include="CDatos\obtenerProductosVendidosCategoria_Result.vb">
+      <DependentUpon>Base De Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\obtenerProductosVendidosNombre_Result.vb">
+      <DependentUpon>Base De Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\obtenerProductosVendidosVendedor_Result.vb">
+      <DependentUpon>Base De Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Productos.vb">
+      <DependentUpon>Base De Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDatos\Tipo_Usuario.vb">
+      <DependentUpon>Base De Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Bienvenida.Designer.vb">
+      <DependentUpon>Bienvenida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Bienvenida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CAdministrador\Backup.Designer.vb">
+      <DependentUpon>Backup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CAdministrador\Backup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CAdministrador\BuscarUsuario.Designer.vb">
+      <DependentUpon>BuscarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CAdministrador\BuscarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CAdministrador\GestionUsuario.Designer.vb">
+      <DependentUpon>GestionUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CAdministrador\GestionUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CAdministrador\MenuAdministrador.Designer.vb">
+      <DependentUpon>MenuAdministrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CAdministrador\MenuAdministrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CCajero\AgregarCliente.Designer.vb">
+      <DependentUpon>AgregarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CCajero\AgregarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CCajero\BuscarClienteCajero.Designer.vb">
+      <DependentUpon>BuscarClienteCajero.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CCajero\BuscarClienteCajero.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CCajero\BuscarProductoCajero.Designer.vb">
+      <DependentUpon>BuscarProductoCajero.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CCajero\BuscarProductoCajero.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CCajero\VentaProducto.Designer.vb">
+      <DependentUpon>VentaProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CCajero\VentaProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CJefeInventarios\InformeEstadistico.Designer.vb">
+      <DependentUpon>InformeEstadistico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CJefeInventarios\InformeEstadistico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CJefeInventarios\ListarVentas.Designer.vb">
+      <DependentUpon>ListarVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CJefeInventarios\ListarVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CCajero\MenuCajero.Designer.vb">
+      <DependentUpon>MenuCajero.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CCajero\MenuCajero.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CJefeInventarios\AgregarProducto.Designer.vb">
+      <DependentUpon>AgregarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CJefeInventarios\AgregarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CCajero\BuscarProducto.Designer.vb">
+      <DependentUpon>BuscarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CCajero\BuscarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\CJefeInventarios\MenuInventario.Designer.vb">
+      <DependentUpon>MenuInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\CJefeInventarios\MenuInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CPresentacion\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CPresentacion\Bienvenida.resx">
+      <DependentUpon>Bienvenida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CAdministrador\Backup.resx">
+      <DependentUpon>Backup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CAdministrador\BuscarUsuario.resx">
+      <DependentUpon>BuscarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CAdministrador\GestionUsuario.resx">
+      <DependentUpon>GestionUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CAdministrador\MenuAdministrador.resx">
+      <DependentUpon>MenuAdministrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CCajero\AgregarCliente.resx">
+      <DependentUpon>AgregarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CCajero\BuscarClienteCajero.resx">
+      <DependentUpon>BuscarClienteCajero.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CCajero\BuscarProductoCajero.resx">
+      <DependentUpon>BuscarProductoCajero.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CCajero\VentaProducto.resx">
+      <DependentUpon>VentaProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CJefeInventarios\InformeEstadistico.resx">
+      <DependentUpon>InformeEstadistico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CJefeInventarios\ListarVentas.resx">
+      <DependentUpon>ListarVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CCajero\MenuCajero.resx">
+      <DependentUpon>MenuCajero.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CJefeInventarios\AgregarProducto.resx">
+      <DependentUpon>AgregarProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CCajero\BuscarProducto.resx">
+      <DependentUpon>BuscarProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\CJefeInventarios\MenuInventario.resx">
+      <DependentUpon>MenuInventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\Report1.rdlc" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet.xsc">
+      <DependentUpon>BaseDeDatosProyectoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDeDatosProyectoDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet.xss">
+      <DependentUpon>BaseDeDatosProyectoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet1.xsc">
+      <DependentUpon>BaseDeDatosProyectoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDeDatosProyectoDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet1.xss">
+      <DependentUpon>BaseDeDatosProyectoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet2.xsc">
+      <DependentUpon>BaseDeDatosProyectoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDeDatosProyectoDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet2.xss">
+      <DependentUpon>BaseDeDatosProyectoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet3.xsc">
+      <DependentUpon>BaseDeDatosProyectoDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDeDatosProyectoDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet3.xss">
+      <DependentUpon>BaseDeDatosProyectoDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet4.xsc">
+      <DependentUpon>BaseDeDatosProyectoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDeDatosProyectoDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet4.xss">
+      <DependentUpon>BaseDeDatosProyectoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet5.xsc">
+      <DependentUpon>BaseDeDatosProyectoDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDeDatosProyectoDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet5.xss">
+      <DependentUpon>BaseDeDatosProyectoDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet6.xsc">
+      <DependentUpon>BaseDeDatosProyectoDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDeDatosProyectoDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet6.xss">
+      <DependentUpon>BaseDeDatosProyectoDataSet6.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="CDatos\Base De Datos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Base De Datos.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet7.xsc">
+      <DependentUpon>BaseDeDatosProyectoDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDeDatosProyectoDataSet7.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet7.xss">
+      <DependentUpon>BaseDeDatosProyectoDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet8.xsc">
+      <DependentUpon>BaseDeDatosProyectoDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDeDatosProyectoDataSet8.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CDatos\Datasets\BaseDeDatosProyectoDataSet8.xss">
+      <DependentUpon>BaseDeDatosProyectoDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="CDatos\Base De Datos.edmx.diagram">
+      <DependentUpon>Base De Datos.edmx</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\UsuarioAnonimo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sell.jpg" />
+    <None Include="Resources\listar.png" />
+    <None Include="Resources\buscar.png" />
+    <None Include="Resources\crud.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\logout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CDatos\Base De Datos.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Base De Datos.edmx</DependentUpon>
+      <LastGenOutput>Base De Datos.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="CDatos\Base De Datos.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Base De Datos.edmx</DependentUpon>
+      <LastGenOutput>Base De Datos.vb</LastGenOutput>
+    </Content>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="41404ccbef394e58874221511cd8ac30" Name="Diagram1">
+        <EntityTypeShape EntityType="BaseDeDatosProyectoModel.Categoria_Producto" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDeDatosProyectoModel.Clientes" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDeDatosProyectoModel.Detalle_Factura" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDeDatosProyectoModel.Empleados" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDeDatosProyectoModel.Facturas" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDeDatosProyectoModel.Productos" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDeDatosProyectoModel.Tipo_Usuario" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="BaseDeDatosProyectoModel.FK__Productos__id_ca__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseDeDatosProyectoModel.FK__Facturas__id_cli__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseDeDatosProyectoModel.FK__Detalle_F__id_fa__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseDeDatosProyectoModel.FK__Detalle_F__id_pr__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseDeDatosProyectoModel.FK__Empleados__id_ti__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseDeDatosProyectoModel.FK__Facturas__id_emp__4CA06362" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
